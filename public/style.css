@@ -1,0 +1,14 @@
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.card-subtitle {
+    font-weight: bold;
+}
+
+.card-rating {
+    font-weight: bold;
+}
+

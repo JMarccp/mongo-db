@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Mongo Blogging App</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+        <h2>Mongo Bloggin App</h2>
+        <div class="row">
+        <div class="col-lg-3 col-md-3 col-2 my-4">
+            <div class = "row">
+                <div class="col-lg-12 col-md-3 col-2 my-2">
+                    <div class="card"">
+                        <div class="card-body">
+                            <h5 class="card-title">Create Document</h5>
+                            <form id="save_documents">
+                                <field>
+                                    <label>Title:</label><br />
+                                    <input id="documentInput" type="text" name="documentTitle" placeholder="document title" /><br />
+                                    <label>Body:</label><br />
+                                    <input id="bodyInput" type="text" name="documentBody" placeholder="document body" /><br />
+                                    <label>Number:</label>
+                                    <input id="numInput" type="text" name="numInput" placeholder="number of document" style="width:40px" />
+                                    <button id="postButton" name="postButton" method="POST" >Create</button>
+                                </field>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-3 col-2 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Edit Document</h5>
+                            <form id="query_documents">
+                                <field>
+                                    <label>Title:</label><br />
+                                    <input id="updateTitle" type="text" name="updateTitle" placeholder="update title" /><br />
+                                    <label>Body:</label><br />
+                                    <input id="updateBody" type="text" name="updateBody" placeholder="update body" /></field><br />
+                                    <label>Id:</label><br />
+                                    <input id="documentIdUp" type="text" name="documentIdUp" placeholder="document id" />
+                                    <button id="AddButton" name="AddButton" method="PUT">Edit</button>
+                                </field>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-3 col-2 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Delete Documents</h5>
+                            <form id="delete_documents">
+                                <field>
+                                    <label>Id: </label>
+                                    <input id="documentIdDel" type="text" name="documentIdDel" placeholder="document id" />
+                                    <button>Delete One</button>
+                                </field>
+                            </form>
+                            <form id="delete_all">
+                                <field>
+                                    <button>Delete All</button>
+                                </field>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-3 col-2 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Search Documents</h5>
+                            <form id="search_documents">
+                                <field>
+                                    <label>Id: </label>
+                                    <input id="documentIdS" type="text" name="documentIdS" placeholder="document Id" />
+                                    <button id="getButton" name="getButton" value="submit" type="submit">Search</button><br />
+                                </field>
+                            </form>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-3 col-2 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Sort Documents</h5>
+                            <form id="sort_docs">
+                                <field>
+                                    <label>Lower than: </label>
+                                    <input id="documentIdsort" type="text" name="documentIdsort" placeholder="number" />
+                                    <button id="getButton" name="getButton" value="submit" type="submit">Sort</button><br />
+                                </field>
+                            </form>
+                            <form id="sort_2_docs">
+                                <field>
+                                    <label>Upper than: </label>
+                                    <input id="documentIdsort2" type="text" name="documentIdsort" placeholder="number" />
+                                    <button id="getButton" name="getButton" value="submit" type="submit">Sort</button><br />
+                                </field>
+                            </form>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-3 col-2 my-4">
+            <h2>Documents:</h2>
+                <div id="results" class="row">
+            
+        </div>
+    </div>
+        </div>
+        <script src="./api.js"></script>
+    </body>
+</html>
